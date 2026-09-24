@@ -1,0 +1,113 @@
+:root {
+    /* BACKGROUNDS */
+
+    --bg--black-light: #1A1A1B;
+    --bg-light: #FFFFFF;
+    --bg-grey-light: #F7F7F7;
+    --bg-dark: #101011;
+
+    /* COLORS */
+
+    /* CERULEAN BLUE  */
+    --color-blue-500: #3090FF;
+    --color-blue-600: #1A71FB;
+
+    /* --- 3. ELECTRIC VIOLET --- */
+    --color-violet-50: #F5F2FF;
+    --color-violet-500: #8C4DFF;
+    --color-violet-600: #7F27FF;
+
+    /* GREEN  */
+    --color-green-500: #09DE13;
+    --color-green-50: #EEFFEE;
+
+    /* Guardsman Red */
+    --color-red-500: #FF1F1F;
+    --color-red-50: #FFEFEF;
+
+    /* Web Orange */
+    --color-orange-500: #FAA300;
+
+    /* Electric Lime & Others  */
+    --color-lime-500: #9DC909;
+
+    /* FONT WEIGHTS */
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+
+    /* FONT SIZES */
+
+    --fs-display-1: 64px;
+    --fs-display-2: 56px;
+    --fs-h1: 52px;
+    --fs-h2: 48px;
+    --fs-h3: 42px;
+    --fs-h4: 36px;
+    --fs-h5: 28px;
+    --fs-h6: 24px;
+    --fs-h7: 18px;
+
+    --fs-text-xl: 24px;
+    --fs-text-lg: 22px;
+    --fs-text-md: 18px;
+    --fs-text-sm: 16px;
+    --fs-text-xm: 14px;
+    --fs-text-xs: 12px;
+
+    /* FONT FAMILIES */
+
+    --font-main: 'Manrope', sans-serif;
+    --font-secondary: 'Plus Jakarta Sans', sans-serif;
+
+    --font-main: var(--font-main);
+    --font-secondary: var(--font-secondary);
+}
+
+/* Basic */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+}
