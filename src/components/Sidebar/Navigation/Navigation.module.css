@@ -1,0 +1,51 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.navigation>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation>div>h3 {
+    font-weight: inherit;
+    color: #727272;
+    font-size: var(--fs-text-xm);
+    line-height: 150%;
+
+}
+
+
+.link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-neutral-800);
+    font-size: var(--fs-text-xm);
+    line-height: 150%;
+    padding: 12px;
+
+}
+
+.link>svg {
+    width: 17px;
+    height: 17px;
+}
+
+.link>span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.link.active {
+    background-color: var(--color-blue-100);
+    border-radius: 12px;
+    color: var(--color-neutral-800);
+    font-weight: var(--fw-semibold);
+}
+

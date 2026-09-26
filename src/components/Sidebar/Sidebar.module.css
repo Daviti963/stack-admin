@@ -1,0 +1,66 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    width: 280px;
+    /* height: 100%; */
+    height: 100vh;
+
+    padding: 32px 16px;
+    font-family: var(--font-secondary);
+
+}
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo>button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.logo>button svg {
+    width: 24px;
+    height: 21px;
+}
+
+/* companyLogo */
+
+.companyLogo {
+    margin: 53px 0 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+
+    border: 1px solid var(--color-neutral-100);
+    border-radius: 12px;
+
+    padding: 2px;
+
+
+}
+
+.companyLogo>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.companyLogo>div>p {
+    font-size: var(--fs-text-xs);
+    color: var(--color-neutral-300);
+}
+
+.companyLogo>div>span {
+    color: var(--color-neutral-800);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-xm);
+}
