@@ -18,6 +18,10 @@
 
 }
 
+/* navItemWrapper */
+
+
+
 
 .link {
     text-decoration: none;
@@ -28,7 +32,13 @@
     font-size: var(--fs-text-xm);
     line-height: 150%;
     padding: 12px;
+    border-radius: 12px;
+    transition: all 0.1s ease;
 
+}
+
+.link:not(.active):hover {
+    background-color: var(--color-neutral-100);
 }
 
 .link>svg {
@@ -44,8 +54,51 @@
 
 .link.active {
     background-color: var(--color-blue-100);
-    border-radius: 12px;
     color: var(--color-neutral-800);
     font-weight: var(--fw-semibold);
 }
 
+
+/* subitems */
+
+.subitem {
+    position: relative;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 18px;
+}
+
+.subitem:before {
+    content: '';
+    position: absolute;
+    margin-top: 2px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-neutral-200);
+}
+
+
+.subitem>.subitemLink {
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: var(--color-neutral-800);
+    font-size: var(--fs-text-xm);
+    line-height: 150%;
+    width: 50%;
+    transition: all 0.1s ease;
+}
+
+
+.subitemLink:not(.active):hover {
+    color: var(--color-blue-600);
+}
+
+.subitemLink.active {
+    font-weight: var(--fw-semibold);
+    color: var(--color-blue-600);
+}

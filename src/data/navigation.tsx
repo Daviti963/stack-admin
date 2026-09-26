@@ -22,7 +22,7 @@ export const navSection: NavSection[] = [
                 icon: <RxCube />,
                     count: 119,
                 subItems: [
-                    { name: "Sneakers", href: "/products/sneakers" },
+                    { name: "Sneakers", href: "/products/sneakers"},
                     { name: "Jacket", href: "/products/jacket" },
                     { name: "T-Shirt", href: "/products/t-shirt" },
                     { name: "Bag", href: "/products/bag" },
