@@ -11,6 +11,7 @@
     /* NEUTRAL */
 
     --color-neutral-100: #E7E7E7;
+    --color-neutral-200: #D1D1D1;
     --color-neutral-300: #B0B0B0;
     --color-neutral-800: #454545;
 
@@ -18,6 +19,7 @@
     --color-blue-100: #D9EDFF;
     --color-blue-500: #3090FF;
     --color-blue-600: #1A71FB;
+    --color-blue-700: #1A71F6;
 
     /* --- 3. ELECTRIC VIOLET --- */
     --color-violet-50: #F5F2FF;
@@ -72,6 +74,7 @@
     --font-secondary: var(--font-secondary);
 }
 
+
 /* Basic */
 
 *,
@@ -119,4 +122,23 @@ body {
     font-weight: var(--fw-regular);
     background-color: var(--bg-grey-light);
     min-height: 100dvh;
+}
+
+/*  */
+
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
 }

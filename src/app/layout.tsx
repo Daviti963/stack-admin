@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Sidebar from "../components/layout/Sidebar/Sidebar";
+import Header from "../components/layout/Header/Header";
 
 // 1. Manrope შრიფტის კონფიგურაცია
 const manrope = Manrope({
@@ -24,18 +25,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${manrope.variable} ${jakarta.variable}`}
-    >
-      <body className="min-h-full flex flex-col">
-        <Sidebar />
-        <div className="flex-1 flex flex-col min-h-screen">
-          {/* <Header /> */}
-          <main className="flex-1 p-6">
-            {children}
-          </main>
+    <html lang="en" className={`${manrope.variable} ${jakarta.variable}`} suppressHydrationWarning>
+      <body>
+
+        <div className="layout-wrapper">
+          <Sidebar />
+
+          <div className="main-wrapper">
+            <Header />
+            <main className="content">
+              {children}
+            </main>
+          </div>
         </div>
+
       </body>
     </html>
   );
