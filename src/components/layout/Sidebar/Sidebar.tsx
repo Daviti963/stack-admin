@@ -1,20 +1,19 @@
 'use client'
 import styles from './Sidebar.module.css';
-import CultersLogo from '../CultersLogo/CultersLogo';
-import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from './Navigation/Navigation';
-import { LuPanelLeftClose } from "react-icons/lu";
 import Darkmode from './Darkmode/Darkmode';
-import UserDefaultCard from '../UserProfileCard/UserProfileCard';
+import UserDefaultCard from '../../ui/UserProfileCard/UserProfileCard';
+import CloseOpen from './Close&Open/Close&Open';
+
 
 export default function Sidebar() {
+
+
     return (
         <aside className={styles.aside}>
-            <div className={styles.logo}>
-                <Link href='/'><CultersLogo /></Link>
-                <button><LuPanelLeftClose /></button>
-            </div>
+
+            <CloseOpen />
 
             <div className={styles.companyLogo}>
                 <Image

@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo>button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.logo>button svg {
+    width: 24px;
+    height: 21px;
+}
+
+.button.active {
+    transform: rotate(180deg);
+}

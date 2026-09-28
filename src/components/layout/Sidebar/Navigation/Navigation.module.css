@@ -1,0 +1,19 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.navigation>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation>div>h3 {
+    font-weight: inherit;
+    color: #727272;
+    font-size: var(--fs-text-xm);
+    line-height: 150%;
+
+}
