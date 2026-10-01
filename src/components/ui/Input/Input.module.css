@@ -1,0 +1,31 @@
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.inputWrapper>input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid var(--color-neutral-300);
+    font-family: var(--font-secondary);
+    border-radius: 12px;
+}
+
+.inputWrapper>input:focus {
+    border: 1px solid var(--color-blue-500);
+    outline: var(--color-blue-500);
+}
+
+.inputWrapper>input::placeholder {
+    font-size: var(--fs-text-xm);
+    color: var(--color-neutral-800);
+}
+
+@media screen and (max-width:768px) {
+    .inputWrapper {
+        display: none;
+    }
+}

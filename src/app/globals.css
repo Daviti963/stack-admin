@@ -9,11 +9,12 @@
     /* COLORS */
 
     /* NEUTRAL */
-
+    --color-neutral-50: #F6F6F6;
     --color-neutral-100: #E7E7E7;
     --color-neutral-200: #D1D1D1;
     --color-neutral-300: #B0B0B0;
     --color-neutral-800: #454545;
+
 
     /* CERULEAN BLUE  */
     --color-blue-100: #D9EDFF;
@@ -139,6 +140,6 @@ body {
 }
 
 .content {
-  flex: 1;
-  padding: 32px;
+    flex: 1;
+    padding: 32px;
 }

@@ -2,14 +2,14 @@ import Image from "next/image"
 import styles from './UserProfileCard.module.css';
 
 interface UserDefaultCardProps {
-    hasBorder: boolean
+    className?: string;
 }
 
 
-export default function UserDefaultCard({ hasBorder }: UserDefaultCardProps) {
+export default function UserDefaultCard({ className }: UserDefaultCardProps) {
 
     return (
-        <div className={`${styles.profileCard} ${hasBorder ? styles.cardWithBorder : ''}`}>
+        <div className={`${styles.profileCard} ${className}`}>
             <Image
                 src='/images/userProfile.png'
                 alt='Company logo'

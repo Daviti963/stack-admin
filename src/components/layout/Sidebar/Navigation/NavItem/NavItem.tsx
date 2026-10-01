@@ -6,7 +6,15 @@ import Arrow from '@/src/components/ui/Arrow/Arrow';
 import { useState } from 'react';
 import { SubNavItem } from '@/src/types/navigation';
 
-export default function NavItem({ item }: { item: any }) {
+import { useAtom } from 'jotai';
+import { isOpenState } from '@/src/states/state';
+
+interface Prop {
+    onClick: () => void;
+    item: any
+}
+
+export default function NavItem({ item, onClick }: Prop) {
     const pathname = usePathname();
 
 
@@ -16,6 +24,7 @@ export default function NavItem({ item }: { item: any }) {
     );
 
     const [isOpen, setIsOpen] = useState<boolean>(!!hasActiveSubItem);
+    const [isOpenNav, setIsOpenNav] = useAtom(isOpenState);
 
     const isActive = pathname === item.href;
 
@@ -28,6 +37,8 @@ export default function NavItem({ item }: { item: any }) {
                     if (item.subItems) {
                         e.preventDefault();
                         setIsOpen((prev) => !prev);
+                    } else {
+                        setIsOpenNav(false);
                     }
                 }}
             >
@@ -51,6 +62,8 @@ export default function NavItem({ item }: { item: any }) {
                                 key={subitem.name}
                                 href={subitem.href}
                                 className={`${styles.subitemLink} ${isSubActive ? styles.active : ''}`}
+
+                                onClick={onClick}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
