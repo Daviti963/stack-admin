@@ -2,7 +2,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
 
+.profileCard>img {
+    border-radius: 6px;
 }
 
 .profileCard>div {
@@ -20,18 +23,4 @@
 .profileCard>div>p {
     font-size: var(--fs-text-xs);
     color: var(--color-neutral-300);
-}
-
-
-/* cardWithBorder | SideBar */
-
-.cardWithBorder {
-    margin-top: 62px;
-    border: 1px solid var(--color-neutral-100);
-    border-radius: 12px;
-    padding: 8px;
-}
-
-.cardWithBorder>img {
-    border-radius: 6px;
 }

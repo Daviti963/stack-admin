@@ -6,12 +6,15 @@ import Darkmode from './Darkmode/Darkmode';
 import UserDefaultCard from '../../ui/UserProfileCard/UserProfileCard';
 import CloseOpen from './Close&Open/Close&Open';
 
+import { useAtom } from 'jotai';
+import { isOpenState } from '@/src/states/state';
 
 export default function Sidebar() {
 
+    const [isOpen, setIsOpen] = useAtom(isOpenState);
 
     return (
-        <aside className={styles.aside}>
+        <aside className={`${styles.aside} ${isOpen ? styles.active : ''}`}>
 
             <CloseOpen />
 
@@ -31,7 +34,7 @@ export default function Sidebar() {
 
             <Navigation />
             <Darkmode />
-            <UserDefaultCard hasBorder />
+            <UserDefaultCard className={styles.cardWithBorder} />
         </aside>
     )
 }
